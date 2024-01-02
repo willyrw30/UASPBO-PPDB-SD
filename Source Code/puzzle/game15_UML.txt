@@ -1,0 +1,30 @@
+@startuml
+class MainWindow {
+    masukkan_id()
+    cek_peserta()
+    repeat_test()
+    btn_clicked()
+    restart()
+    checker()
+    tabriklation()
+    insert_to_database()
+    runner_title()
+    show_success_message()
+        grid
+    layout
+    name
+    btnRestart
+    participant_id
+    participant_id
+    attempts
+    __init__()
+}
+class MyButton {
+    setText()
+        value
+    position
+    __init__()
+}
+QWidget <|-- MainWindow
+QPushButton <|-- MyButton
+@enduml
