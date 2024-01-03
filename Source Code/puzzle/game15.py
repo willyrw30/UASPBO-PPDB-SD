@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QPushButton
 from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QFont
 import mysql.connector
-# from button import MyButton
+from button import MyButton
 
 
 class MainWindow(QWidget):
@@ -183,23 +183,6 @@ class MainWindow(QWidget):
         dlg.setFont(QFont('Arial', 12))
         dlg.setStandardButtons(QMessageBox.Ok)
         dlg.exec_()
-
-
-class MyButton(QPushButton):
-    def __init__(self, value, position=None):
-        super().__init__()
-
-        self.setFixedSize(QSize(80, 80))
-        self.setFont(QFont('Arial', 20))
-        self.value = value
-        self.position = position
-        self.setText(False)
-
-    def setText(self, click: bool):
-        if self.value == 0:
-            super().setText(f"")
-        else:
-            super().setText(f"{self.value}")
 
 
 if __name__ == '__main__':
